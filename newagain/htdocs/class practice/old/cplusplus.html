@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <body>
+ <h1>Pizza lab</h1>
+     <p>#include iostream<br>
+#include math.h<br>
+using namespace std;<br>
+<br>
+int main() {<br>
+	const int PEOPLE_PER_LARGE = 7;<br>
+	const int PEOPLE_PER_MED = 3;<br>
+	int numLargePizza = 0;<br>
+	int numMedPizza = 0;<br>
+	int numSmallPizza = 0;<br>
+	int numTotalGuest = 0;<br>
+	const int LARGE_RADIUS = 10;<br>
+	const int MED_RADIUS = 8;<br>
+	const int SMALL_RADIUS = 6;<br>
+	double largeArea = 0;<br>
+	double medArea = 0;<br>
+	double smallArea = 0;<br>
+	double totalArea = 0;<br>
+	double individArea = 0.0;<br>
+	double numTip = 0.0;<br>
+	double decimalTip = 0.0;<br>
+	double realTip = 0.0;<br>
+	const double TIP_CONVERTER = 100;<br>
+	const double LARGE_PRICE = 14.68;<br>
+	const double MED_PRICE = 11.48;<br>
+	const double SMALL_PRICE = 7.28;<br>
+	double firstTotalPrice = 0;<br>
+	double totalPrice = 0.0;<br>
+	int realTotalPrice = 0;<br>
+	const double PI = 3.14159265;<br>
+<br>
+	// COUNT YOUR MANY PIZZAS   <br>
+	cout << "Please enter the number of guests: ";<br>
+	cin >> numTotalGuest;<br>
+	cout << endl;<br>
+<br>
+	//find large<br>
+	numLargePizza = numTotalGuest / PEOPLE_PER_LARGE;<br>
+	cout << numLargePizza << " large pizzas, ";<br>
+<br>
+<br>
+	//find med<br>
+	numMedPizza = (numTotalGuest % PEOPLE_PER_LARGE) / PEOPLE_PER_MED;<br>
+	cout << numMedPizza << " medium pizzas, ";<br>
+<br>
+	//find small<br>
+	cout << "and ";<br>
+	numSmallPizza = numTotalGuest - ((PEOPLE_PER_LARGE * numLargePizza) +<br>
+	(PEOPLE_PER_MED * numMedPizza));<br>
+	cout << numSmallPizza << " small pizzas will be needed." << endl;<br>
+<br>
+	// PART 2<br>
+<br>
+<br>
+	//find areas individually and totally<br>
+	largeArea = numLargePizza * (PI * pow(LARGE_RADIUS, 2));<br>
+	medArea = numMedPizza * (PI * pow(MED_RADIUS, 2));<br>
+	smallArea = numSmallPizza * (PI * pow(SMALL_RADIUS, 2));<br>
+	totalArea = largeArea + medArea + smallArea;<br>
+<br>
+	//output and find individual<br>
+	cout << endl << "A total of " << totalArea << " square inches of pizza will be purchased ";<br>
+	individArea = totalArea / numTotalGuest;<br>
+	cout << "(" << individArea << " per guest)." << endl;<br>
+<br>
+<br>
+	//Part 3<br>
+<br>
+	//find price without tip<br>
+	firstTotalPrice = (numLargePizza * LARGE_PRICE) + (numMedPizza * MED_PRICE) + (numSmallPizza * SMALL_PRICE);<br>
+<br>
+	//find tip   <br>
+	cin >> numTip;<br>
+	decimalTip = numTip / TIP_CONVERTER;<br>
+	realTip = firstTotalPrice * decimalTip;<br>
+<br>
+	//find total price   <br>
+	totalPrice = realTip + firstTotalPrice;<br>
+	realTotalPrice = round(totalPrice);<br>
+<br>
+	//output    <br>
+	cout << endl << "Please enter the tip as a percentage (i.e. 10 means 10%): " << endl;<br>
+	cout << "The total cost of the event will be: $" << realTotalPrice << endl;<br>
+<br>
+	system("pause");<br>
+	return 0;<br>
+}</p>
+ </body>
+</html>

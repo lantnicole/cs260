@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="section2.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <input type="text" ng-model="form" ng-keyup="onup(form)">
+            <ul>
+                <li ng-repeat="line in cities">
+                    {{line.city}}
+                </li>
+                
+            </ul>
+            <div>
+                {{gitstuff}}
+            </div>
+        </div>
+    </body>
+</html>
