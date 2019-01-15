@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>my web app</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="javascripts/mycomment.js"></script>
+
+</head>
+
+<body ng-app="comment" ng-controller="mainctrl">
+
+
+    <div class="page-header">
+        <h1>My Web App </h1>
+    </div>
+
+    <form ng-submit="addComment()">
+        <input type="text" ng-model="content"></input>
+        <button type="submit">Submit</button>
+    </form>
+    <div ng-repeat="comment in comments | orderBy: '-upvotes'">
+        <span ng-click="incrementVotes(comment)"></span> {{comment.title}} - upvotes: {{comment.upvotes}}
+    </div>
+</body>
+
+</html>

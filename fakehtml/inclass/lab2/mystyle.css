@@ -1,0 +1,31 @@
+body {
+    background-image: url(http://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+h1{
+    color: white;
+    text-shadow: 3px 2px black;
+    font-size: 40px
+}
+form{
+    color: white;
+    text-shadow: 3px 2px black;
+
+}
+p{
+    color: white;
+    text-shadow: 3px 2px black;
+}
+p2{
+    color: white;
+    text-shadow: 3px 2px black;
+    font-size: 30px;
+}
+div{
+    color: white
+}
+textarea{
+    
+}

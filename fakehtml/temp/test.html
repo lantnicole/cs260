@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style type="text/css">
+   body {background-color: powderblue;}
+   
+  </style>
+ </head>
+ 
+ <body>
+ <h1>Hello World </h1>
+ 
+ <p>
+  
+  testing out a paragraph<br>
+  
+ </p>
+ 
+ <form>
+ <input  type="text" id="groceryItem">
+ <button onclick="addList(event)">Post A Comment</button>
+ </form>
+ 
+ <p id="temp"></p>
+ 
+ <script>
+  function addList(event)
+  {
+     //var x = prompt("Add a grocery item");
+     document.getElementById("temp").innerHTML = document.getElementById("groceryItem").value;
+     event.preventDefault();
+     var list = document.getElementById("myList").value;
+     var newItem = document.createElement('li').value;
+     list.appendChild(newItem);
+     newItem.appendChild("groceryItem");
+     console.log(list);
+     
+  }
+  
+  //normal comment
+  /*
+  comment example. comment frequently^^
+  */
+  
+  function myFunction(event){
+   var array = [5,7,9,11]; 
+   var hello = 5;
+   hello = "howdy";
+   alert(hello);
+   
+   
+   //for loop example
+   for(var ind = 0; ind < array.length; ind++){
+    console.log(array[ind]);
+   }
+   
+   for(var item in array){
+    console.log(item, array[item])
+   }
+   
+   document.getElementById("demo").innerHTML = "Hello " +document.getElementById("myform").value
+   event.preventDefault();
+   
+   
+  }
+  
+ </script>
+ 
+ 
+ <ul id="myList">
+ 
+   </ul>
+ </body>
+</html>
